@@ -138,3 +138,13 @@ ignore = [
     "T201", "T203", # remove print and pprint
     "E402", # Module level import not at top of file
 ]
+
+[tool.poetry]
+name = "proje-adi"
+version = "0.1.0"
+description = "Proje açıklaması"
+authors = ["Yazar Adı <email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+# Diğer bağımlılıklarınızı buraya ekleyin
