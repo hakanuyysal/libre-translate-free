@@ -1,1 +1,1 @@
-import argos_translate_files 
+import argostranslatefiles 
