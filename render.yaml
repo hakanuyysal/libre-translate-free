@@ -4,9 +4,10 @@ services:
     env: python
     buildCommand: |
       python -m pip install --upgrade pip
+      pip install wheel setuptools
       pip install -r requirements.txt
-      pip install -e .
-    startCommand: python main.py
+      pip install .
+    startCommand: libretranslate --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.11
