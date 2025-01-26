@@ -2,10 +2,17 @@ services:
   - type: web
     name: libretranslate
     env: python
-    buildCommand: pip install -r requirements.txt && pip install -e .
+    buildCommand: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+      pip install -e .
     startCommand: python main.py
     envVars:
       - key: PYTHON_VERSION
         value: 3.11.11
-      - key: POETRY_VERSION
-        value: none 
+      - key: DISABLE_POETRY
+        value: "1"
+      - key: PORT
+        value: "5000"
+    plan: free
+    memoryLimit: 1024 
